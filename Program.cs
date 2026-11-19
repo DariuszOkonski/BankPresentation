@@ -39,6 +39,7 @@
                     switch (mainMenuChoice)
                     {
                         case 1:
+                            CustomersMenu();
                             break;
                         case 2:
                             break;
@@ -63,6 +64,25 @@
             }
 
             Console.WriteLine("Thank you! Visit again");
+        }
+
+        static void CustomersMenu()
+        {
+            int customerManuChoice = -1;
+
+            do
+            {
+                Console.WriteLine("\n::: Customers menu :::");
+                Console.WriteLine("1.Add Customer");
+                Console.WriteLine("2.Delete Customer");
+                Console.WriteLine("3.Update Customer");
+                Console.WriteLine("4.View Customers");
+                Console.WriteLine("0.Back to Main Menu");
+
+                Console.Write("Enter choice: ");
+                customerManuChoice = Convert.ToInt32(Console.ReadLine());
+            }
+            while (customerManuChoice != 0);
         }
     }
 }
