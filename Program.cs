@@ -42,6 +42,7 @@
                             CustomersMenu();
                             break;
                         case 2:
+                            AccountsMenu();
                             break;
                         case 3:
                             break;
@@ -53,8 +54,8 @@
                             break;
                     }
 
-                    Console.ReadKey();
-                    Console.Clear();
+                    //Console.ReadKey();
+                    //Console.Clear();
 
                 } while (mainMenuChoice != 0);
             }
@@ -83,6 +84,25 @@
                 customerManuChoice = Convert.ToInt32(Console.ReadLine());
             }
             while (customerManuChoice != 0);
+        }
+
+        static void AccountsMenu()
+        {
+            int accountsManuChoice = -1;
+
+            do
+            {
+                Console.WriteLine("\n::: Accounts menu :::");
+                Console.WriteLine("1.Add Account");
+                Console.WriteLine("2.Delete Account");
+                Console.WriteLine("3.Update Account");
+                Console.WriteLine("4.View Accounts");
+                Console.WriteLine("0.Back to Main Menu");
+
+                Console.Write("Enter choice: ");
+                accountsManuChoice = Convert.ToInt32(Console.ReadLine());
+            }
+            while (accountsManuChoice != 0);
         }
     }
 }
